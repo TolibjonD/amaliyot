@@ -224,35 +224,16 @@ nav .navbar-brand{
    }
    .detail .card{
     flex-wrap: wrap;
-    width: 500px;
+    width: 90%;
     margin-top: 0px;
    }
    .detail .card .card_img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 95%;
    }
    .detail .card .card_img img {
-    width: 480px;
-   }
-}
-@media (max-width: 700px){
-    .detail{
-        padding-bottom: 20px;
-    }
-   .detail .card{
-    flex-wrap: wrap;
-    width: 500px;
-    margin-top: 0px;
-   }
-   .detail .card .card_img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-   }
-   .detail .card .card_img img {
-    width: 480px;
+    width: 80%;
    }
 }
