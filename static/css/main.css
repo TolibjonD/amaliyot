@@ -226,14 +226,17 @@ nav .navbar-brand{
     flex-wrap: wrap;
     width: 90%;
     margin-top: 0px;
+    height: auto;
    }
    .detail .card .card_img {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 95%;
+    height: auto;
    }
    .detail .card .card_img img {
-    width: 80%;
+    width: 90%;
+    height: auto;
    }
 }
