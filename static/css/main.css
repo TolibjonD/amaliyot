@@ -238,4 +238,7 @@ nav .navbar-brand{
     align-items: center;
     width: 100%;
    }
+   .detail .card .card_img img {
+    width: 90%;
+   }
 }
