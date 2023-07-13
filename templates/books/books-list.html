@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} Practice | Books List {% endblock title %}
+
+{% block content %}
+{% if books %}
+<section id="books" class="books">
+    <div class="row mx-auto">
+        <div class="col col-lg-8 mx-auto">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" name="q" value="{{ q }}" type="search" placeholder="Qidiruv ..." aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Qidirish</button>
+              </form>
+        </div>
+    </div>
+    <div class="box">
+{% for book in books %}
+<div class="card">
+    <div class="photo_box">
+        <img src="{{ book.photo.url }}" alt="">
+        <div class="layer">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <i class="fa-regular fa-heart"></i>
+            <a href="{% url 'books:detail' book.id %}"><i class="fa-solid fa-eye"></i></a>
+        </div>
+    </div>
+    <div class="content">
+        <p class="title"> {{ book.title }} </p>
+        <p class="price">{{ book.price }} /- Uzs.</p>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<p>No books found.</p>
+{% endif %}
+</div>
+</section>
+{% endblock content %}

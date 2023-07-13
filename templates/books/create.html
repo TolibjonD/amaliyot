@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Practice | Add book {% endblock title %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="row mx-auto">
+    <div class="col col-lg-6 mx-auto">
+        <h1 class='text-center'>Add Book</h1>
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ book|crispy }}
+            <button type="submit" class="btn btn-danger">Add</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

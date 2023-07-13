@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Practice | Profile {% endblock title %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="box d-flex justify-content-center">
+    <div class="card text-center" style='width:300px;'>
+        <div class="wrapper">
+            <img src="{{ user.photo.url }}" alt="No user image" class="card-img-top">
+        </div>
+        <p>@{{ user.username }}</p>
+        <p>{{ user.get_full_name }}</p>
+        <p>{{ user.email }}</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger wrench-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Update <i class="fa-solid fa-wrench"></i></button>
+    </div>
+</div>
+  <!-- Modal -->
+<form action="" method="post" enctype='multipart/form-data'>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel"><i class="fa-solid fa-user-nurse text-danger" style="font-size:25px;"></i> {{ user.username }}</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {% csrf_token %}
+              {{ form|crispy }}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-lock"></i> Close</button>
+              <button type="submit" class="btn btn-danger">Save <i class="fa-solid fa-floppy-disk"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+</form>
+
+{% endblock content %}

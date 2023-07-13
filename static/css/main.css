@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* BOOKS SECTION STYLE BEGINNING */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.books .box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.books .box .card{
+    width: 280px;
+    border: 1px solid #999;
+    position: relative;
+}
+
+.books .box .card:hover img{
+    transform: rotate(5deg) translateY(-3px) scale(.98);
+}
+
+.books .box .card .photo_box{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.books .box .card .photo_box img{
+    height: 300px;
+    transition: .2s ease-in-out;
+}
+
+.books .box .card .photo_box .layer{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 60%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: rgb(65, 65, 65);
+    transition: .4s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.books .box .card:hover .photo_box .layer{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.books .box .card .photo_box .layer i{
+    color: rgb(211, 211, 211);
+    font-size: 18px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.books .box .card .photo_box .layer i:hover{
+    color: #ff5aa4;
+    transform: scale(1.1);
+}
+
+.books .box .card .content .title{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff5aa4;
+}
+
+.books .box .card .content .price{
+    text-align: center;
+    color: #ff4eb8;
+}
+
+
+
+/* BOOKS SECTION STYLE ENDING */
+nav .navbar-brand{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.box button:hover .fa-wrench{
+    animation-name: wrench;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.box .wrapper{
+    overflow: hidden;
+}
+.box .wrapper img{
+    transition: .4s;
+}
+.box .wrapper img:hover{
+    transform: scale(1.05
+    );
+}
+@keyframes wrench{
+    10%{
+        transform: translate(3px, -2px) scale(.98) ;
+    }
+    25%{
+        transform: rotate(120deg);
+    }
+    30%{
+        transform: translate(-3px, 2px) scale(1.03);
+    }
+    50%{
+        transform: translate(-1px, -2px) scale(1);
+    }
+    60%{
+        transform: rotate(120deg);
+    }
+    70%{
+        transform: translate(-2px, 2px) scale(.99);
+    }
+}
+
+
+/* BOOK DETAIL PAGE DESIGN */
+
+.detail{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detail .card{
+    background-color: rgb(244, 244, 244);
+    padding: 5px;
+    position: relative;
+    max-width: 1200px;
+    border-radius: 6px;
+    box-shadow: 4px 6px 7px #9999;
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+.detail .card .card_img{
+    position: relative;
+}
+
+
+.detail .card .card_img img{
+    transform: translate(-80px, 80px);
+    border-radius: 6px;
+    height: 450px;
+}
+
+.detail .card .content{
+    padding: 10px;
+}
+
+.detail .card .content h1{
+    font-size: 30px;
+    color: rgb(255, 56, 149);
+}
+
+.detail .card .content span{
+    color: #9999;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.detail .card .content .text{
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.detail .card .content .btn{
+    display: inline-block;
+    bottom: 0;
+    text-decoration: none;
+    background-color: #ff3798;
+    color: #fff;
+    padding: 7px 25px;
+    font-weight: 550;
+    margin-top: 20px;
+    transition: .4s ease-in-out;
+}
+
+.detail .card .content .btn:hover{
+    letter-spacing: 1px;
+}
+
+@media (max-width: 780px){
+   .detail .card .card_img img{
+    transform: translate(0);
+    box-shadow: none;
+   }
+}
+@media (max-width: 700px){
+    .detail{
+        padding-bottom: 20px;
+    }
+   .detail .card{
+    flex-wrap: wrap;
+    width: 500px;
+    margin-top: 0px;
+   }
+   .detail .card .card_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   }
+}

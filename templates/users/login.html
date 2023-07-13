@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Practice | Login {% endblock title %}
+
+{% load crispy_forms_tags %}
+
+{% block content %} 
+
+<div class="row mx-auto">
+    <div class="col col-xxl-6 mx-auto">
+        <form action="" method="post">
+    
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-danger">Login</button> No account yet ? get <a href="{% url 'users:register' %}">Register </a>
+        
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
