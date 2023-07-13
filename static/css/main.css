@@ -236,9 +236,9 @@ nav .navbar-brand{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 500px;
    }
    .detail .card .card_img img {
-    width: 90%;
+    width: 480px;
    }
 }
